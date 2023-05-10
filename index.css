@@ -1,0 +1,45 @@
+body
+{
+background-color: #5A5950;
+
+
+
+}
+
+
+.na
+{
+    font-family: 'Playfair Display', serif;
+ 
+}
+h1{
+    font-family: 'Playfair Display', serif;
+}
+.card{
+    border-radius: 10px;
+    font-family: 'Playfair ', serif;
+    color: #5A5950;
+    transition: 1s ease-in-out;
+}
+
+.card:hover{
+    transform: scale(1.2);
+
+}
+
+
+a{
+    width: ;
+
+}
+a:hover{
+   transform: scale(1.1);
+   transition: 0.3s ease-in-out;
+}
+
+.card img{
+    height: 100px;
+}
+
+
+

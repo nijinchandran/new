@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Womens Collection</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+            
+    
+   <style>
+
+    body{
+        animation: fadeInAnimation ease 3s;
+        animation-iteration-count: 1;
+        animation-fill-mode:forwards;
+        background-color: #6e80c0;
+        font-family: 'Oswald', sans-serif;
+        
+    }
+    @keyframes fadeInAnimation{
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+
+    .na{
+        font-family: 'Oswald', sans-serif;
+        font-size: 15px;
+        
+    }
+
+  li,a{
+        color: white;
+
+    }
+
+   li,a:hover{
+        
+        color: rgb(210, 210, 70);
+        transition: 1.2s ease-in-out;
+    }
+
+    .card_deck{
+        border-radius: 24px 24px 0px 0px;
+
+    }
+
+    .row{
+        border-radius: 24px 24px 0px 0px;
+
+    }
+.card.img{
+       border-radius: 24px 24px 0px 0px;
+       height: 200px;
+       width: 200px;
+    }
+
+    .card{
+        transition: 1.0s ease;
+        border-radius: 24px 24px 0px 0px;
+       
+    }
+
+    .card:hover{
+      
+
+    }
+
+    .card a{
+        background-color: #6e80c0;
+        font-family: 'Oswald', sans-serif;
+        border-radius: 24px;
+        box-shadow: rgba(0,0,0,.2) 0 3px 5px -1px,rgba(0,0,0,.14) 0 6px 10px 0,rgba(0,,0,.12) 0 1px 18px 0;
+        font-size: 15px;
+        border: 2px solid white;
+        transition: all .50s ease-in-out;
+     
+
+    }
+
+    .card a:hover{
+        background-color: #27408b;
+        transform: scale(1.2);
+    }
+
+    .card .card-body{
+        background-color: #6e7cb9;
+        color: #ffffff;
+        border: 6px solid white;
+    }
+
+    .card img {
+        height: 55%;
+        width: 100%;
+        object-fit: cover;
+        border: 3px solid white;
+    }
+
+
+    @media (max-width:900px) {
+        footer{
+            text-align: center;
+            align-items: center;
+        }
+    }
+    @media (max-width:900px) {
+        .card{
+            width: 100%;
+          gap: 5px;
+        }
+    }
+
+
+
+
+
+
+  
+   </style>
+
+
+</head>
+<body>
+
+
+
+    <div class="na" style="border-bottom: 10px solid white;">
+        <nav class="navbar navbar-expand-sm " style="background-color: #6e80c0;border-bottom: 8px solid white;">
+            <h4 style="color: white;">FCart</h4>
+
+
+
+            <ul class="navbar-nav ml-auto" style="">
+                <li class="nav-item">
+                    <a class="nav-link" href="http://127.0.0.1:5500/index.html"
+                        style="color: white;margin-top: 10px;">HOME</a>
+                </li>
+
+                <li class="nav-item2" style="margin-top: 10px;">
+                    <a class="nav-link" href="http://127.0.0.1:5500/sign.html" style="color: white;">SIGNUP
+                </li>
+                <li class="nav-item dropdown" style="margin-top: -7px;">
+                    <a class="nav-link dropdown-toggle"data-toggle="dropdown" href="" style="color: white;">CATEGORY
+                        <div class="dropdown-menu" style="background-color: #6e80c0;">
+                            <a class="dropdown-item" style="color: white;" href="http://127.0.0.1:5500/men.html">Men</a>
+                            <a class="dropdown-item"  style="color: white;" href="http://127.0.0.1:5500/women.html">Women</a>
+                            <a class="dropdown-item"  style="color: white;" href="http://127.0.0.1:5500/kids.html">Kids</a>
+                            </div>
+                </li>
+              
+                <li class="nav-item2" style="margin-top: 10px;margin-left: 10px;">
+                    <a class="nav-link" href="http://127.0.0.1:5500/cart.html" style="color: white;">CART
+                </li>
+                <li class="nav-item5" style="margin-top: -8px;">
+                    <a href="#"> <button style="border: 2px solid white;font-size: 14px;" type="button" class="btn btn- text-white" data-toggle="modal"
+                            data-target="#myModal">
+                            LOGIN
+                        </button>
+                    </a>
+                    
+                </li>
+
+
+            </ul>
+            <br>
+            <!-- The Modal -->
+            <div class="modal fade" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 class="modal-title"
+                                style="text-align: center;letter-spacing: 2px;color:#5A5950  ;margin-left: 146px;">
+                                Login</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <form action="" class="was-validated">
+
+                                <div class="form-group">
+                                    <input st type="text" class="form-control" id="uname" placeholder="Enter username"
+                                        name="uname" required style="border: 1px solid rgba(128, 128, 128, 0.356)">
+                                    <div class="valid-feedback" style="color: #FF6363;">Valid</div>
+                                    <div class="invalid-feedback">Please fill out this field.</div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" id="pwd" placeholder="Enter password"
+                                        name="pswd" required style="border: 1px solid rgba(128, 128, 128, 0.356);">
+                                    <div class="valid-feedback" style="color: #FF6363;">Valid.</div>
+                                    <div class="invalid-feedback">Please fill out this field.</div>
+                                </div>
+                                <button type="submit" class="btn "
+                                    style="background-color: #6e80c0;color: white;">Submit</button>
+
+                            </form>
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn" data-dismiss="modal"
+                            style="background-color: #6e80c0;color: white;">Close</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </nav>
+    </div>
+    <br><br><br>
+
+    <h1 style="text-align: center;color: rgba(255, 255, 255, 0.779);">Womens Collections</h1>
+    <p style="text-align: center;color: rgba(255, 255, 255, 0.737);font-family: 'Playfair Display', serif;">Summers
+        Womens Collection</p>
+
+
+    <div class="container">
+        <div class="row py-3">
+            <div class="card-deck">
+                <div class="card">
+                    <img style=" border-radius: 24px 24px 0px 0px;" src="https://rukminim1.flixcart.com/image/432/518/ksgehzk0/t-shirt/f/b/t/s-j216520beh-calvin-klein-jeans-original-imag6ysa3vs8szps.jpeg?q=70"
+                        alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h4 style="text-align: center;" class="card-title">JACK & JONES </h4>
+                        <p style="text-align: center;" class="card-text">Men Regular Fit Checkered Spread Collar Casual
+                            Shirt</p>
+                        <p style="text-align: center;">3109/-</p>
+                        <a href="https://www.flipkart.com/calvin-klein-jeans-printed-women-round-neck-black-t-shirt/p/itmdc46d1de62e74?pid=TSHG4G4CESZMFRHY&lid=LSTTSHG4G4CESZMFRHYVMVVK2&marketplace=FLIPKART&fm=productRecommendation%2Fsimilar&iid=R%3As%3Bp%3ATSHG4G4CYH7HCD9E%3Bl%3ALSTTSHG4G4CYH7HCD9ECYJY6T%3Bpt%3App%3Buid%3A4a3428c5-fddb-11ec-b278-9fc41fde1843%3B.TSHG4G4CESZMFRHY&ppt=pp&ppn=pp&ssid=vyufebsar40000001657169167859&otracker=pp_reco_Similar%2BProducts_10_Calvin%2BKlein%2BJeans%2BPrinted%2BWomen%2BRound%2BNeck%2BBlack%2BT-Shirt_TSHG4G4CESZMFRHY_productRecommendation%2Fsimilar_9&otracker1=pp_reco_NA_productRecommendation%2Fsimilar_Similar%2BProducts_DESKTOP_HORIZONTAL_productCard_cc_10_NA_view-all&cid=TSHG4G4CESZMFRHY"
+                            class="btn btn stretched-link mx-5"
+                            style="background-color: ;color: rgba(255, 255, 255, 0.779);">Add to Cart</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img style=" border-radius: 24px 24px 0px 0px;" src="https://rukminim1.flixcart.com/image/432/518/ksxjs7k0/t-shirt/o/e/h/s-j20j215698beh-calvin-klein-jeans-original-imag6efgtkyg6wue.jpeg?q=70"
+                        alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h4 style="text-align: center;" class="card-title">Calvin Klein </h4>
+                        <p style="text-align: center;" class="card-text"> black  Round Neck Black T-Shirt Ck</p>
+                        <p style="text-align: center;">2591/-</p>
+                        <a href="https://www.flipkart.com/calvin-klein-jeans-printed-women-round-neck-black-t-shirt/p/itm4f8c8d8e01c5d?pid=TSHG4G3C9XMKYD6E&lid=LSTTSHG4G3C9XMKYD6EB5U393&marketplace=FLIPKART&q=calvin+klein+women+t+shirt&store=clo%2Fash%2Fank%2Floi&srno=s_1_34&otracker=AS_QueryStore_OrganicAutoSuggest_1_20_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_20_na_na_na&fm=search-autosuggest&iid=85d1d7ee-52d8-4bb3-b781-cb6559e0c829.TSHG4G3C9XMKYD6E.SEARCH&ppt=sp&ppn=sp&ssid=vyufebsar40000001657169167859&qH=33869f8725d6e010"
+                            class="btn btn stretched-link mx-5"
+                            style="background-color: ;color: rgba(255, 255, 255, 0.779);">Add to Cart</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img style=" border-radius: 24px 24px 0px 0px;" src="https://rukminim1.flixcart.com/image/432/518/ksxjs7k0/t-shirt/b/x/d/s-j216518tiv-calvin-klein-jeans-original-imag6efgnmubevzy.jpeg?q=70"
+                        alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h4 style="text-align: center;" class="card-title">JACK & JONES </h4>
+                        <p style="text-align: center;" class="card-text">Printed Men T-Shirt blue printed dark blue
+                            T-shirt</p>
+                        <p style="text-align: center;">500/-</p>
+                        <a href="https://www.flipkart.com/calvin-klein-jeans-embroidered-women-round-neck-pink-t-shirt/p/itm23fba33553570?pid=TSHG4G4CHNRMBHRK&lid=LSTTSHG4G4CHNRMBHRKWPDJXM&marketplace=FLIPKART&fm=productRecommendation%2Fsimilar&iid=R%3As%3Bp%3ATSHG4G4CESZMFRHY%3Bl%3ALSTTSHG4G4CESZMFRHYVMVVK2%3Bpt%3App%3Buid%3Aced36b73-fddb-11ec-871d-db61873648d5%3B.TSHG4G4CHNRMBHRK&ppt=pp&ppn=pp&ssid=vyufebsar40000001657169167859&otracker=pp_reco_Similar%2BProducts_6_33.productCard.PMU_HORIZONTAL_Calvin%2BKlein%2BJeans%2BEmbroidered%2BWomen%2BRound%2BNeck%2BPink%2BT-Shirt_TSHG4G4CHNRMBHRK_productRecommendation%2Fsimilar_5&otracker1=pp_reco_PINNED_productRecommendation%2Fsimilar_Similar%2BProducts_GRID_productCard_cc_6_NA_view-all&cid=TSHG4G4CHNRMBHRK" class="btn btn stretched-link mx-5"
+                            style="background-color: ;color: rgba(255, 255, 255, 0.779);">Add to Cart</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img style=" border-radius: 24px 24px 0px 0px;" src="https://rukminim1.flixcart.com/image/432/518/ksgehzk0/t-shirt/l/j/d/s-j216520yaf-calvin-klein-jeans-original-imag6ysfm4rfgcqv.jpeg?q=70"
+                        alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h4 style="text-align: center;" class="card-title">JACK & JONES </h4>
+                        <p style="text-align: center;" class="card-text">Men Regular Fit Checkered Spread Collar Printed
+                            Shirt</p>
+                        <p style="text-align: center;">600/-</p>
+                        <a href="https://www.flipkart.com/calvin-klein-jeans-printed-women-round-neck-white-t-shirt/p/itmd9fb9b039a415?pid=TSHG4G4CG7ADXW36&lid=LSTTSHG4G4CG7ADXW36V6TMQ1&marketplace=FLIPKART&fm=productRecommendation%2Fsimilar&iid=R%3As%3Bp%3ATSHG4G4CHNRMBHRK%3Bl%3ALSTTSHG4G4CHNRMBHRKWPDJXM%3Bpt%3App%3Buid%3Ae5ab5a2a-fddb-11ec-aea8-739f6ce3ed43%3B.TSHG4G4CG7ADXW36&ppt=pp&ppn=pp&ssid=vyufebsar40000001657169167859&otracker=pp_reco_Similar%2BProducts_6_33.productCard.PMU_HORIZONTAL_Calvin%2BKlein%2BJeans%2BPrinted%2BWomen%2BRound%2BNeck%2BWhite%2BT-Shirt_TSHG4G4CG7ADXW36_productRecommendation%2Fsimilar_5&otracker1=pp_reco_PINNED_productRecommendation%2Fsimilar_Similar%2BProducts_GRID_productCard_cc_6_NA_view-all&cid=TSHG4G4CG7ADXW36" class="btn btn stretched-link mx-5"
+                            style="background-color: ;color: rgba(255, 255, 255, 0.779);">Add to Cart</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="container">
+        <div class="row py-3">
+            <div class="card-deck">
+                <div class="card">
+                    <img style=" border-radius: 24px 24px 0px 0px;" src="https://rukminim1.flixcart.com/image/432/518/ksgehzk0/t-shirt/f/b/t/s-j216520beh-calvin-klein-jeans-original-imag6ysa3vs8szps.jpeg?q=70"
+                        alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h4 style="text-align: center;" class="card-title">JACK & JONES </h4>
+                        <p style="text-align: center;" class="card-text">Men Regular Fit Checkered Spread Collar Casual
+                            Shirt</p>
+                        <p style="text-align: center;">3109/-</p>
+                        <a href="https://www.flipkart.com/calvin-klein-jeans-printed-women-round-neck-black-t-shirt/p/itmdc46d1de62e74?pid=TSHG4G4CESZMFRHY&lid=LSTTSHG4G4CESZMFRHYVMVVK2&marketplace=FLIPKART&fm=productRecommendation%2Fsimilar&iid=R%3As%3Bp%3ATSHG4G4CYH7HCD9E%3Bl%3ALSTTSHG4G4CYH7HCD9ECYJY6T%3Bpt%3App%3Buid%3A4a3428c5-fddb-11ec-b278-9fc41fde1843%3B.TSHG4G4CESZMFRHY&ppt=pp&ppn=pp&ssid=vyufebsar40000001657169167859&otracker=pp_reco_Similar%2BProducts_10_Calvin%2BKlein%2BJeans%2BPrinted%2BWomen%2BRound%2BNeck%2BBlack%2BT-Shirt_TSHG4G4CESZMFRHY_productRecommendation%2Fsimilar_9&otracker1=pp_reco_NA_productRecommendation%2Fsimilar_Similar%2BProducts_DESKTOP_HORIZONTAL_productCard_cc_10_NA_view-all&cid=TSHG4G4CESZMFRHY"
+                            class="btn btn stretched-link mx-5"
+                            style="background-color: ;color: rgba(255, 255, 255, 0.779);">Add to Cart</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img style=" border-radius: 24px 24px 0px 0px;" src="https://rukminim1.flixcart.com/image/432/518/ksxjs7k0/t-shirt/o/e/h/s-j20j215698beh-calvin-klein-jeans-original-imag6efgtkyg6wue.jpeg?q=70"
+                        alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h4 style="text-align: center;" class="card-title">Calvin Klein </h4>
+                        <p style="text-align: center;" class="card-text"> black  Round Neck Black T-Shirt Ck</p>
+                        <p style="text-align: center;">2591/-</p>
+                        <a href="https://www.flipkart.com/calvin-klein-jeans-printed-women-round-neck-black-t-shirt/p/itm4f8c8d8e01c5d?pid=TSHG4G3C9XMKYD6E&lid=LSTTSHG4G3C9XMKYD6EB5U393&marketplace=FLIPKART&q=calvin+klein+women+t+shirt&store=clo%2Fash%2Fank%2Floi&srno=s_1_34&otracker=AS_QueryStore_OrganicAutoSuggest_1_20_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_20_na_na_na&fm=search-autosuggest&iid=85d1d7ee-52d8-4bb3-b781-cb6559e0c829.TSHG4G3C9XMKYD6E.SEARCH&ppt=sp&ppn=sp&ssid=vyufebsar40000001657169167859&qH=33869f8725d6e010"
+                            class="btn btn stretched-link mx-5"
+                            style="background-color: ;color: rgba(255, 255, 255, 0.779);">Add to Cart</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img style=" border-radius: 24px 24px 0px 0px;" src="https://rukminim1.flixcart.com/image/432/518/ksxjs7k0/t-shirt/b/x/d/s-j216518tiv-calvin-klein-jeans-original-imag6efgnmubevzy.jpeg?q=70"
+                        alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h4 style="text-align: center;" class="card-title">JACK & JONES </h4>
+                        <p style="text-align: center;" class="card-text">Printed Men T-Shirt blue printed dark blue
+                            T-shirt</p>
+                        <p style="text-align: center;">500/-</p>
+                        <a href="https://www.flipkart.com/calvin-klein-jeans-embroidered-women-round-neck-pink-t-shirt/p/itm23fba33553570?pid=TSHG4G4CHNRMBHRK&lid=LSTTSHG4G4CHNRMBHRKWPDJXM&marketplace=FLIPKART&fm=productRecommendation%2Fsimilar&iid=R%3As%3Bp%3ATSHG4G4CESZMFRHY%3Bl%3ALSTTSHG4G4CESZMFRHYVMVVK2%3Bpt%3App%3Buid%3Aced36b73-fddb-11ec-871d-db61873648d5%3B.TSHG4G4CHNRMBHRK&ppt=pp&ppn=pp&ssid=vyufebsar40000001657169167859&otracker=pp_reco_Similar%2BProducts_6_33.productCard.PMU_HORIZONTAL_Calvin%2BKlein%2BJeans%2BEmbroidered%2BWomen%2BRound%2BNeck%2BPink%2BT-Shirt_TSHG4G4CHNRMBHRK_productRecommendation%2Fsimilar_5&otracker1=pp_reco_PINNED_productRecommendation%2Fsimilar_Similar%2BProducts_GRID_productCard_cc_6_NA_view-all&cid=TSHG4G4CHNRMBHRK" class="btn btn stretched-link mx-5"
+                            style="background-color: ;color: rgba(255, 255, 255, 0.779);">Add to Cart</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img style=" border-radius: 24px 24px 0px 0px;" src="https://rukminim1.flixcart.com/image/432/518/ksxjs7k0/t-shirt/b/d/q/s-j216519beh-calvin-klein-jeans-original-imag6e7ftw2fbnyp.jpeg?q=70"
+                        alt="" class="card-img-top" >
+                    <div class="card-body">
+                        <h4 style="text-align: center;" class="card-title">Calvin Klein </h4>
+                        <p style="text-align: center;" class="card-text">Men Regular Fit Checkered Spread Collar Printed
+                            Shirt</p>
+                        <p style="text-align: center;">600/-</p>
+                        <a href="http://127.0.0.1:5500/page1.html#" class="btn btn stretched-link mx-5"
+                            style="background-color: ;color: rgba(255, 255, 255, 0.779);">Add to Cart</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="container">
+        <div class="row py-3">
+            <div class="card-deck">
+                <div class="card">
+                    <img style=" border-radius: 24px 24px 0px 0px;" src="https://rukminim1.flixcart.com/image/432/518/ksgehzk0/t-shirt/f/b/t/s-j216520beh-calvin-klein-jeans-original-imag6ysa3vs8szps.jpeg?q=70"
+                        alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h4 style="text-align: center;" class="card-title">JACK & JONES </h4>
+                        <p style="text-align: center;" class="card-text">Men Regular Fit Checkered Spread Collar Casual
+                            Shirt</p>
+                        <p style="text-align: center;">3109/-</p>
+                        <a href="https://www.flipkart.com/calvin-klein-jeans-printed-women-round-neck-black-t-shirt/p/itmdc46d1de62e74?pid=TSHG4G4CESZMFRHY&lid=LSTTSHG4G4CESZMFRHYVMVVK2&marketplace=FLIPKART&fm=productRecommendation%2Fsimilar&iid=R%3As%3Bp%3ATSHG4G4CYH7HCD9E%3Bl%3ALSTTSHG4G4CYH7HCD9ECYJY6T%3Bpt%3App%3Buid%3A4a3428c5-fddb-11ec-b278-9fc41fde1843%3B.TSHG4G4CESZMFRHY&ppt=pp&ppn=pp&ssid=vyufebsar40000001657169167859&otracker=pp_reco_Similar%2BProducts_10_Calvin%2BKlein%2BJeans%2BPrinted%2BWomen%2BRound%2BNeck%2BBlack%2BT-Shirt_TSHG4G4CESZMFRHY_productRecommendation%2Fsimilar_9&otracker1=pp_reco_NA_productRecommendation%2Fsimilar_Similar%2BProducts_DESKTOP_HORIZONTAL_productCard_cc_10_NA_view-all&cid=TSHG4G4CESZMFRHY"
+                            class="btn btn stretched-link mx-5"
+                            style="background-color: ;color: rgba(255, 255, 255, 0.779);">Add to Cart</a>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <img style=" border-radius: 24px 24px 0px 0px;" src="https://rukminim1.flixcart.com/image/432/518/ksxjs7k0/t-shirt/o/e/h/s-j20j215698beh-calvin-klein-jeans-original-imag6efgtkyg6wue.jpeg?q=70"
+                        alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h4 style="text-align: center;" class="card-title">Calvin Klein </h4>
+                        <p style="text-align: center;" class="card-text"> black  Round Neck Black T-Shirt Ck</p>
+                        <p style="text-align: center;">2591/-</p>
+                        <a href="https://www.flipkart.com/calvin-klein-jeans-printed-women-round-neck-black-t-shirt/p/itm4f8c8d8e01c5d?pid=TSHG4G3C9XMKYD6E&lid=LSTTSHG4G3C9XMKYD6EB5U393&marketplace=FLIPKART&q=calvin+klein+women+t+shirt&store=clo%2Fash%2Fank%2Floi&srno=s_1_34&otracker=AS_QueryStore_OrganicAutoSuggest_1_20_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_20_na_na_na&fm=search-autosuggest&iid=85d1d7ee-52d8-4bb3-b781-cb6559e0c829.TSHG4G3C9XMKYD6E.SEARCH&ppt=sp&ppn=sp&ssid=vyufebsar40000001657169167859&qH=33869f8725d6e010"
+                            class="btn btn stretched-link mx-5"
+                            style="background-color: ;color: rgba(255, 255, 255, 0.779);">Add to Cart</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img style=" border-radius: 24px 24px 0px 0px;" src="https://rukminim1.flixcart.com/image/432/518/ksxjs7k0/t-shirt/g/g/o/s-4wt1k136007-calvin-klein-jeans-original-imag6ef9zxapwvgy.jpeg?q=70"
+                        alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h4 style="text-align: center;" class="card-title">Calvin Klein </h4>
+                        <p style="text-align: center;" class="card-text">Printed Men T-Shirt blue printed dark blue
+                            T-shirt</p>
+                        <p style="text-align: center;">500/-</p>
+                        <a href="http://127.0.0.1:5500/page1.html#" class="btn btn stretched-link mx-5"
+                            style="background-color: ;color: rgba(255, 255, 255, 0.779);">Add to Cart</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img style=" border-radius: 24px 24px 0px 0px;" src="https://rukminim1.flixcart.com/image/432/518/ku2zjww0/t-shirt/j/n/m/s-j20j216817beh-calvin-klein-jeans-original-imag7a5ax6qjkx4z.jpeg?q=70"
+                        alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h4 style="text-align: center;margin-top:;" class="card-title">Calvin Klein </h4>
+                        <p style="text-align: center;" class="card-text">Men Regular Fit Checkered Spread Collar Printed
+                            Shirt</p>
+                        <p style="text-align: center;">600/-</p>
+                        <a href="http://127.0.0.1:5500/page1.html#" class="btn btn stretched-link mx-5"
+                            style="background-color: ;color: rgba(255, 255, 255, 0.779);">Add to Cart</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+
+
+
+
+
+
+
+
+
+
+    
+    <footer class="bg- py-5"  style="background-color: #6e80c0;border-top: 30px solid white;">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3 mb-4 mb-md-0">
+              <h4 class="text-white mb-3">Contact</h4>
+              <p class="text-white">Address: Washington Road, Street 32<br>Bangalore</p>
+              <p class="text-white">Phone: 01 222 365 627378</p>
+              <div class="d-flex">
+                <a href="#" class="me-3 text-white"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="me-3 text-white"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="me-3 text-white"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="me-3 text-white"><i class="fab fa-pinterest-p"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+              </div>
+            </div>
+            <div class="col-md-3 mb-4 mb-md-0">
+              <h4 class="text-white mb-3">About</h4>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-white">About us</a></li>
+                <li><a href="#" class="text-white">Delivery Information</a></li>
+                <li><a href="#" class="text-white">Privacy Policy</a></li>
+                <li><a href="#" class="text-white">Terms & Conditions</a></li>
+                <li><a href="#" class="text-white">Contact Us</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3 mb-4 mb-md-0">
+              <h4 class="text-white mb-3">My Account</h4>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-white">Sign In</a></li>
+                <li><a href="#" class="text-white">View Cart</a></li>
+                <li><a href="#" class="text-white">My Wishlist</a></li>
+                <li><a href="#" class="text-white">Track My Orders</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <h4 class="text-white mb-3">Help</h4>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-white">Payments</a></li>
+                <li><a href="#" class="text-white">Shipping</a></li>
+                <li><a href="#" class="text-white">Cancellation & Returns</a></li>
+                <li><a href="#" class="text-white">FAQ</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+
+
+  
+    
+</body>
+</html>

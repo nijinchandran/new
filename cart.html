@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/92a4237cd4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
+
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+
+<style>
+
+    html{
+        scroll-behavior: smooth;
+    }
+
+    body{
+        animation: fadeInAnimation ease 3s;
+        animation-iteration-count: 1;
+        animation-fill-mode:forwards;
+        background-color: #6e80c0;
+        font-family: 'Oswald', sans-serif;
+        
+    }
+    @keyframes fadeInAnimation{
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+
+    .na{
+       
+        font-size: 15px;
+        font-family: 'Oswald', sans-serif;
+        
+    }
+
+  li,a{
+        color: white;
+
+    }
+
+   li,a:hover{
+        
+        color: rgb(210, 210, 70);
+        transition: 1.2s ease-in-out;
+    }
+
+    .card_deck{
+        border-radius: 24px 24px 0px 0px;
+
+    }
+
+    .row{
+        border-radius: 24px 24px 0px 0px;
+
+    }
+.card.img{
+       border-radius: 24px 24px 0px 0px;
+       height: 200px;
+       width: 200px;
+    }
+
+    .card{
+        transition: 1.0s ease;
+        border-radius: 24px 24px 0px 0px;
+       
+    }
+
+    .card:hover{
+        transform: scale(1.1);
+
+    }
+
+    .card a{
+        background-color: #6e80c0;
+       
+        border-radius: 24px;
+       
+        font-size: 15px;
+     
+
+    }
+
+    .card a:hover{
+        background-color: rgb(119, 104, 167);
+    }
+
+ 
+
+    .form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 450px;
+  margin: 100px 500px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.title {
+  font-size: 28px;
+  color: royalblue;
+  font-weight: 600;
+  letter-spacing: -1px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+}
+
+.title::before,.title::after {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  left: 0px;
+  background-color: royalblue;
+}
+
+.title::before {
+  width: 18px;
+  height: 18px;
+  background-color: royalblue;
+}
+
+.title::after {
+  width: 18px;
+  height: 18px;
+  animation: pulse 1s linear infinite;
+}
+
+.message, .signin {
+  color: rgba(88, 87, 87, 0.822);
+  font-size: 14px;
+}
+
+.signin {
+  text-align: center;
+}
+
+.signin a {
+  color: royalblue;
+}
+
+.signin a:hover {
+  text-decoration: underline royalblue;
+}
+
+.flex {
+  display: flex;
+  width: 100%;
+  gap: 6px;
+}
+
+.form label {
+  position: relative;
+}
+
+.form label .input {
+  width: 100%;
+  padding: 10px 40px 20px 10px;
+  outline: 0;
+  border: 1px solid rgba(105, 105, 105, 0.397);
+  border-radius: 10px;
+}
+
+.form label .input + span {
+  position: absolute;
+  left: 10px;
+  top: 15px;
+  color: grey;
+  font-size: 0.9em;
+  cursor: text;
+  transition: 0.3s ease;
+}
+
+.form label .input:placeholder-shown + span {
+  top: 15px;
+  font-size: 0.9em;
+}
+
+.form label .input:focus + span,.form label .input:valid + span {
+  top: 30px;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+
+.form label .input:valid + span {
+  color: green;
+}
+
+.submit {
+  border: none;
+  outline: none;
+  background-color: #6e80c0;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  transform: .3s ease;
+}
+
+.submit:hover {
+  background-color: rgb(56, 90, 194);
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+
+.cont img{
+
+    width: 500px;
+    height: 500px;
+    margin-left:400px ;
+}
+
+
+
+
+
+@media (max-width:900px) {
+
+.cont img{
+    width:100%;
+    margin-left: 20px;
+  
+}
+
+
+
+footer{
+            text-align: center;
+            align-items: center;
+        }
+}
+
+
+  
+   </style>
+
+
+</head>
+
+<body>
+
+
+
+
+    <div class="na">
+        <nav class="navbar navbar-expand-sm " style="background-color: #6e80c0;border-bottom: 8px solid white;">
+            <h4 style="color: white;">FCart</h4>
+
+
+
+            <ul class="navbar-nav ml-auto" style="">
+                <li class="nav-item">
+                    <a class="nav-link" href="http://127.0.0.1:5500/index.html"
+                        style="color: white;margin-top: 10px;">HOME</a>
+                </li>
+
+                <li class="nav-item2" style="margin-top: 10px;">
+                    <a class="nav-link" href="http://127.0.0.1:5500/sign.html" style="color: white;">SIGNUP
+                </li>
+                <li class="nav-item dropdown" style="margin-top: -7px;">
+                    <a class="nav-link dropdown-toggle"data-toggle="dropdown" href="" style="color: white;">CATEGORY
+                        <div class="dropdown-menu" style="background-color: #6e80c0;">
+                            <a class="dropdown-item" style="color: white;" href="http://127.0.0.1:5500/men.html">Men</a>
+                            <a class="dropdown-item"  style="color: white;" href="http://127.0.0.1:5500/women.html">Women</a>
+                            <a class="dropdown-item"  style="color: white;" href="http://127.0.0.1:5500/kids.html">Kids</a>
+                            </div>
+                </li>
+              
+                <li class="nav-item2" style="margin-top: 10px;margin-left: 10px;">
+                    <a class="nav-link" href="http://127.0.0.1:5500/cart.html" style="color: white;">CART
+                </li>
+                <li class="nav-item5" style="margin-top: -8px;">
+                    <a href="#"> <button style="border: 2px solid white;font-size: 14px;" type="button" class="btn btn- text-white" data-toggle="modal"
+                            data-target="#myModal">
+                            LOGIN
+                        </button>
+                    </a>
+                    
+                </li>
+
+
+            </ul>
+            <br>
+            <!-- The Modal -->
+            <div class="modal fade" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 class="modal-title"
+                                style="text-align: center;letter-spacing: 2px;color:#5A5950  ;margin-left: 146px;">
+                                Login</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <form action="" class="was-validated">
+
+                                <div class="form-group">
+                                    <input st type="text" class="form-control" id="uname" placeholder="Enter username"
+                                        name="uname" required style="border: 1px solid rgba(128, 128, 128, 0.356)">
+                                    <div class="valid-feedback" style="color: #FF6363;">Valid</div>
+                                    <div class="invalid-feedback">Please fill out this field.</div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" id="pwd" placeholder="Enter password"
+                                        name="pswd" required style="border: 1px solid rgba(128, 128, 128, 0.356);">
+                                    <div class="valid-feedback" style="color: #FF6363;">Valid.</div>
+                                    <div class="invalid-feedback">Please fill out this field.</div>
+                                </div>
+                                <button type="submit" class="btn "
+                                    style="background-color: #6e80c0;color: white;">Submit</button>
+
+                            </form>
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn" data-dismiss="modal"
+                            style="background-color: #6e80c0;color: white;">Close</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </nav>
+    </div>
+
+    <div class="cont" style="width: 100%;height: 600px;background-color: #fff;">
+     <img src="https://img.freepik.com/free-vector/man-shopping-supermarket_74855-7612.jpg?w=740&t=st=1683702538~exp=1683703138~hmac=792d28e1995dc1327b6e1d27d046791b2903e57f7cb31c86caf7faf71cc20bd7" alt="">
+    </div>
+
+
+
+    <footer class="bg- py-5"  style="background-color: #6e80c0;border-top: 30px solid white;">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3 mb-4 mb-md-0">
+              <h4 class="text-white mb-3">Contact</h4>
+              <p class="text-white">Address: Washington Road, Street 32<br>Bangalore</p>
+              <p class="text-white">Phone: 01 222 365 627378</p>
+              <div class="d-flex">
+               
+              </div>
+            </div>
+            <div class="col-md-3 mb-4 mb-md-0">
+              <h4 class="text-white mb-3">About</h4>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-white">About us</a></li>
+                <li><a href="#" class="text-white">Delivery Information</a></li>
+                <li><a href="#" class="text-white">Privacy Policy</a></li>
+                <li><a href="#" class="text-white">Terms & Conditions</a></li>
+                <li><a href="#" class="text-white">Contact Us</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3 mb-4 mb-md-0">
+              <h4 class="text-white mb-3">My Account</h4>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-white">Sign In</a></li>
+                <li><a href="#" class="text-white">View Cart</a></li>
+                <li><a href="#" class="text-white">My Wishlist</a></li>
+                <li><a href="#" class="text-white">Track My Orders</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <h4 class="text-white mb-3">Help</h4>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-white">Payments</a></li>
+                <li><a href="#" class="text-white">Shipping</a></li>
+                <li><a href="#" class="text-white">Cancellation & Returns</a></li>
+                <li><a href="#" class="text-white">FAQ</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+  
+</body>
+
+</html>

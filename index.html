@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+        
+   <style>
+
+
+html{
+        scroll-behavior: smooth;
+    }
+    body{
+        animation: fadeInAnimation ease 3s;
+        animation-iteration-count: 1;
+        animation-fill-mode:forwards;
+        background-color: #6e80c0;
+        font-family: 'Oswald', sans-serif;
+        
+    }
+    @keyframes fadeInAnimation{
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+
+    .na{
+        font-family: 'Oswald', sans-serif;
+        font-size: 15px;
+        
+    }
+
+  li,a{
+        color: white;
+
+    }
+
+   li,a:hover{
+        
+        color: rgb(210, 210, 70);
+        transition: 1.2s ease-in-out;
+    }
+
+    .card_deck{
+        border-radius: 24px 24px 0px 0px;
+
+    }
+
+    .row{
+        border-radius: 24px 24px 0px 0px;
+
+    }
+.card.img{
+       border-radius: 24px 24px 0px 0px;
+       height: 200px;
+       width: 200px;
+    }
+
+    .card{
+        transition: 1.0s ease;
+        border-radius: 24px 24px 0px 0px;
+       
+    }
+
+    .card:hover{
+       
+
+    }
+
+    .card a{
+        background-color: #6e80c0;
+        font-family: 'Oswald', sans-serif;
+        border-radius: 24px;
+        box-shadow: rgba(0,0,0,.2) 0 3px 5px -1px,rgba(0,0,0,.14) 0 6px 10px 0,rgba(0,,0,.12) 0 1px 18px 0;
+        font-size: 15px;
+        border: 2px solid white;
+        transition: all .50s ease-in-out;
+     
+
+    }
+
+    .card a:hover{
+        background-color: #27408b;
+        transform: scale(1.2);
+    }
+
+
+    .card1{
+  background-color: #fff;
+  margin: 100px 300px;
+  padding: 20px;
+  width: 650px;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  color: rgb(99, 102, 102);
+
+}
+
+.form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.group {
+  position: relative;
+}
+
+.form .group label {
+  font-size: 14px;
+  color: rgb(99, 102, 102);
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  background-color: #fff;
+  transition: all .3s ease;
+}
+
+.form .group input,
+.form .group textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  outline: 0;
+  width: 100%;
+  background-color: transparent;
+}
+
+.form .group input:placeholder-shown+ label, .form .group textarea:placeholder-shown +label {
+  top: 10px;
+  background-color: transparent;
+}
+
+.form .group input:focus,
+.form .group textarea:focus {
+  border-color: #3366cc;
+}
+
+.form .group input:focus+ label, .form .group textarea:focus +label {
+  top: -10px;
+  left: 10px;
+  background-color: #fff;
+  color: #3366cc;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.form .group textarea {
+  resize: none;
+  height: 100px;
+}
+
+.form button {
+  background-color: #6e80c0;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form button:hover {
+  background-color: #27408b;
+}
+
+.card .card-body{
+        background-color: #6e7cb9;
+        color: #ffffff;
+        border: 6px solid white;
+    }
+
+    .card img {
+        height: 55%;
+        width: 100%;
+        object-fit: cover;
+        border: 3px solid white;
+    }
+
+
+
+    @media (max-width:900px) {
+
+        .card1{
+            width:350px;
+            margin-left: 70px;
+        }
+        
+    }
+
+
+    @media (max-width:900px) {
+        footer{
+            text-align: center;
+            align-items: center;
+        }
+    }
+    @media (max-width:900px) {
+        .card{
+            width: 100%;
+          gap: 5px;
+        }
+    }
+
+
+
+  
+   </style>
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+    <div class="na">
+        <nav class="navbar navbar-expand-sm " style="background-color: #6e80c0;border-bottom: 8px solid white;">
+            <h4 style="color: white;">FCart</h4>
+
+
+
+            <ul class="navbar-nav ml-auto" style="">
+                <li class="nav-item">
+                    <a class="nav-link" href="http://127.0.0.1:5500/index.html"
+                        style="color: white;margin-top: 10px;">HOME</a>
+                </li>
+
+                <li class="nav-item2" style="margin-top: 10px;">
+                    <a class="nav-link" href="http://127.0.0.1:5500/sign.html" style="color: white;">SIGNUP
+                </li>
+                <li class="nav-item dropdown" style="margin-top: -7px;">
+                    <a class="nav-link dropdown-toggle"data-toggle="dropdown" href="" style="color: white;">CATEGORY
+                        <div class="dropdown-menu" style="background-color: #6e80c0;">
+                            <a class="dropdown-item" style="color: white;" href="http://127.0.0.1:5500/men.html">Men</a>
+                            <a class="dropdown-item"  style="color: white;" href="http://127.0.0.1:5500/women.html">Women</a>
+                            <a class="dropdown-item"  style="color: white;" href="http://127.0.0.1:5500/kids.html">Kids</a>
+                            </div>
+                </li>
+              
+                <li class="nav-item2" style="margin-top: 10px;margin-left: 10px;">
+                    <a class="nav-link" href="http://127.0.0.1:5500/cart.html" style="color: white;">CART
+                </li>
+                <li class="nav-item5" style="margin-top: -8px;">
+                    <a href="#"> <button style="border: 2px solid white;font-size: 14px;" type="button" class="btn btn- text-white" data-toggle="modal"
+                            data-target="#myModal">
+                            LOGIN
+                        </button>
+                    </a>
+                    
+                </li>
+
+
+            </ul>
+            <br>
+            <!-- The Modal -->
+            <div class="modal fade" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 class="modal-title"
+                                style="text-align: center;letter-spacing: 2px;color:#5A5950  ;margin-left: 146px;">
+                                Login</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <form action="" class="was-validated">
+
+                                <div class="form-group">
+                                    <input st type="text" class="form-control" id="uname" placeholder="Enter username"
+                                        name="uname" required style="border: 1px solid rgba(128, 128, 128, 0.356)">
+                                    <div class="valid-feedback" style="color: #FF6363;">Valid</div>
+                                    <div class="invalid-feedback">Please fill out this field.</div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" id="pwd" placeholder="Enter password"
+                                        name="pswd" required style="border: 1px solid rgba(128, 128, 128, 0.356);">
+                                    <div class="valid-feedback" style="color: #FF6363;">Valid.</div>
+                                    <div class="invalid-feedback">Please fill out this field.</div>
+                                </div>
+                                <button type="submit" class="btn "
+                                    style="background-color: #6e80c0;color: white;">Submit</button>
+
+                            </form>
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn" data-dismiss="modal"
+                            style="background-color: #6e80c0;color: white;">Close</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </nav>
+    </div>
+
+
+    <div id="demo" class="carousel slide" data-ride="carousel" style="border-radius: 0px 0px 5px 5px;">
+
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+            <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+
+        <!-- The slideshow -->
+        <div class="carousel-inner" >
+            <div class="carousel-item active">
+                <img src="https://img.freepik.com/free-vector/gradient-very-peri-design-template_52683-82060.jpg?w=826&t=st=1683694900~exp=1683695500~hmac=a98cb488c3165631eaded442c2305310b64746d8177a0e3785be42e2de132853"
+                    width="100%" height="650px" alt="" class="img-fluid">
+            </div>
+            <div class="carousel-item">
+                <img src="https://img.freepik.com/free-vector/realistic-winter-horizontal-banner_23-2149157660.jpg?w=826&t=st=1683695027~exp=1683695627~hmac=0f350adb6a5b3256a7da39083d5b64f0cc5ed9725829d7a685d8bd1cd305ed2f"
+                    alt="" width="100%" height="650px" class="img-fluid">
+            </div>
+            <div class="carousel-item">
+                <img src=https://img.freepik.com/free-vector/realistic-winter-instagram-stories-collection_23-2149157694.jpg?w=826&t=st=1683695089~exp=1683695689~hmac=e16d6d3a3e60fe26533dcf9f23f49896993349fa805597b6303119c5850bcbb8"
+                    alt="" width="100%" height="650px" class="img-fluid">
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+
+    </div><br><br>
+
+
+
+
+    <h1 style="text-align: center;color: rgba(255, 255, 255, 0.779);">Featured Products</h1>
+    <p style="text-align: center;color: rgba(255, 255, 255, 0.737);font-family: 'Playfair Display', serif;">Summers
+        Collection New Design</p>
+
+
+
+    <div class="container" >
+        <div class="row py-3" style=" border-radius: 9px 9px 0px 0px">
+            <div class="card-deck">
+                <div class="card" style=" border-radius:9px 9px 0px 0px;">
+                    <img  style=" border-radius: 24px 24px 0px 0px;" src="https://rukminim1.flixcart.com/image/800/960/l2tcfbk0/shirt/l/a/u/l-133283301-jack-jones-original-image2k4sudfgf2g.jpeg?q=50"
+                        alt="" class="card-img-top">
+                    <div class="card-body" style=" border-radius: 24px 24px 0px 0px;b">
+                        <h4 style="text-align: center;" class="card-title">JACK & JONES </h4>
+                        <p style="text-align: center;" class="card-text">Men Regular Fit Checkered Spread Collar Casual
+                            Shirt</p>
+                        <p style="text-align: center;">3109/-</p>
+                        <a href="https://www.flipkart.com/jack-jones-men-checkered-casual-multicolor-shirt/p/itmba5f4fab14043?pid=SHTGE2K4F9XVSNPV&lid=LSTSHTGE2K4F9XVSNPVTLYSDF&marketplace=FLIPKART&q=jack+and+jones+jeans+regular+fit+men+shirt&store=clo%2Fash%2Faxc%2Fmmk%2Fkp7&srno=s_1_2&otracker=search&otracker1=search&fm=Search&iid=db24dacf-caa1-47a0-8e50-7eeb91ada901.SHTGE2K4F9XVSNPV.SEARCH&ppt=sp&ppn=sp&ssid=avcivv3ti80000001657169067871&qH=2c38cd1dc6301c88"
+                            class="btn btn stretched-link mx-5"
+                            style="background-color: ;color: rgba(255, 255, 255, 0.779);">Add to Cart</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img  style=" border-radius: 24px 24px 0px 0px;background-color: red;" src="https://rukminim1.flixcart.com/image/800/960/ku2zjww0/t-shirt/5/o/6/s-j20j2168130gk-calvin-klein-jeans-original-imag7a4rezcbbggh.jpeg?q=50"
+                        alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h4 style="text-align: center;margin-top: px;" class="card-title">Calvin Klein </h4>
+                        <p style="text-align: center;" class="card-text">Printed Women Round Neck Black T-Shirt</p>
+                        <p style="text-align: center;">2591/-</p>
+                        <a href="https://www.flipkart.com/calvin-klein-jeans-printed-women-round-neck-black-t-shirt/p/itm4f8c8d8e01c5d?pid=TSHG4G3C9XMKYD6E&lid=LSTTSHG4G3C9XMKYD6EB5U393&marketplace=FLIPKART&q=calvin+klein+women+t+shirt&store=clo%2Fash%2Fank%2Floi&srno=s_1_34&otracker=AS_QueryStore_OrganicAutoSuggest_1_20_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_20_na_na_na&fm=search-autosuggest&iid=85d1d7ee-52d8-4bb3-b781-cb6559e0c829.TSHG4G3C9XMKYD6E.SEARCH&ppt=sp&ppn=sp&ssid=vyufebsar40000001657169167859&qH=33869f8725d6e010"
+                            class="btn btn stretched-link mx-5"
+                            style="background-color: ;color: rgba(255, 255, 255, 0.779);">Add to Cart</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img style=" border-radius: 24px 24px 0px 0px;background-color: red;" src="https://rukminim1.flixcart.com/image/800/960/ktaeqvk0/t-shirt/l/y/x/m-13621494-roadster-original-imag6nt23kdhczy5.jpeg?q=50"
+                        alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h4 style="text-align: center;" class="card-title">JACK & JONES </h4>
+                        <p style="text-align: center;" class="card-text">Printed Men T-Shirt blue printed dark blue
+                            T-shirt</p>
+                        <p style="text-align: center;">500/-</p>
+                        <a href="http://127.0.0.1:5500/page1.html#" class="btn btn stretched-link mx-5"
+                        style="background-color: ;color: rgba(255, 255, 255, 0.779);">Add to Cart</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img style=" border-radius: 24px 24px 0px 0px;" src="https://rukminim1.flixcart.com/image/800/960/kzzw5u80/shirt/1/e/e/m-j3200810k9-calvin-klein-jeans-original-imagbvt6kgkbd6cg.jpeg?q=50"
+                        alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h4 style="text-align: center;margin-top: px;" class="card-title">JACK & JONES </h4>
+                        <p style="text-align: center;" class="card-text">Men Regular Fit Checkered Spread Collar Printed
+                            Shirt</p>
+                        <p style="text-align: center;">600/-</p>
+                        <a href="http://127.0.0.1:5500/page1.html#" class="btn btn stretched-link mx-5"
+                            style="background-color: ;color: rgba(255, 255, 255, 0.779);">Add to Cart</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container">
+        <div class="row py-3">
+            <div class="card-deck">
+                <div class="card">
+                    <img style=" border-radius: 24px 24px 0px 0px;" src="https://rukminim1.flixcart.com/image/800/960/l45xea80/shirt/1/t/c/4-5-years-itbsh01084navyls-indian-terrain-original-imagf4kkwdr9fehg.jpeg?q=50"
+                        alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h4 style="text-align: center;margin-top: x;" class="card-title">Indian Terrain</h4>
+                        <p style="text-align: center;" class="card-text">Boys Regular Fit Printed Spread Collar Casual
+                            Shirt</p>
+                        <p style="text-align: center;">669/-</p>
+                        <a href="https://www.flipkart.com/indian-terrain-boys-printed-casual-dark-blue-shirt/p/itm9d9327e3c1c17?pid=SHTGBNUVMZJKZWFV&lid=LSTSHTGBNUVMZJKZWFVXKYABV&marketplace=FLIPKART&store=clo%2Fash%2Faxc%2Fznf&srno=b_1_5&otracker=browse&fm=search-autosuggest&iid=e054cc72-d0d7-44fa-9549-82100f79eda9.SHTGBNUVMZJKZWFV.SEARCH&ppt=browse&ppn=browse&ssid=nbc5rokdxs0000001657170009800"
+                            class="btn btn stretched-link mx-5"
+                            style="background-color: ;color: rgba(255, 255, 255, 0.779);">Add to Cart</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img style=" border-radius: 24px 24px 0px 0px;" src="https://rukminim1.flixcart.com/image/800/960/kx9as280/jean/e/f/t/2-3-years-abdneslfe53890-allen-solly-original-imag9r6zaegrzges.jpeg?q=50"
+                        alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h4 style="text-align: center;margin-top: 20px;" class="card-title">Allen Solly </h4>
+                        <p style="text-align: center;" class="card-text">Slim Boys Black Jeans Kids</p>
+                        <p style="text-align: center;">549/-</p>
+                        <a href="https://www.flipkart.com/allen-solly-slim-boys-black-jeans/p/itmb4a911595f888?pid=JEAG5MPFRKGQRA4G&lid=LSTJEAG5MPFRKGQRA4GFTNT4I&marketplace=FLIPKART&store=clo&srno=b_1_3&otracker=browse&fm=search-autosuggest&iid=0d813317-3028-4ef2-ab39-e9a64b50568b.JEAG5MPFRKGQRA4G.SEARCH&ppt=browse&ppn=browse&ssid=7j72mx459s0000001657170259645"
+                            class="btn btn stretched-link mx-5"
+                            style="background-color: ;color: rgba(255, 255, 255, 0.779);">Add to Cart</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img style=" border-radius: 24px 24px 0px 0px;" src="https://rukminim1.flixcart.com/image/800/960/l41n2q80/kids-dress/w/o/l/-original-imagff98jgnvt3da.jpeg?q=50"
+                        alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h4 style="text-align: center;" class="card-title">Allen Solly </h4>
+                        <p style="text-align: center;" class="card-text">Girls Midi/Knee Length Casual Dress (Pink,
+                            Short Sleeve)</p>
+                        <p style="text-align: center;">589/-</p>
+                        <a href="http://127.0.0.1:5500/page1.html#" class="btn btn stretched-link mx-5"
+                            style="background-color: ;color: rgba(255, 255, 255, 0.779);">Add to Cart</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img style=" border-radius: 24px 24px 0px 0px;" src="https://rukminim1.flixcart.com/image/800/960/l3khsi80/kids-dress/9/t/b/7-8-years-m22cct53red-max-original-imagensferrudvaz.jpeg?q=50"
+                        alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h4 style="text-align: center;margin-top: -;" class="card-title">JACK & JONES </h4>
+                        <p style="text-align: center;" class="card-text">Men Regular Fit Checkered Spread Collar Printed
+                            Shirt</p>
+                        <p style="text-align: center;">600/-</p>
+                        <a href="http://127.0.0.1:5500/page1.html#" class="btn btn stretched-link mx-5"
+                            style="background-color: ;color: rgba(255, 255, 255, 0.779);">Add to Cart</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div><br>
+
+
+    <div class="carousel">
+        <div class="carousel">
+            <img style=" border-radius: 24px 24px 0px 0px;" src="https://t3.ftcdn.net/jpg/03/28/04/54/360_F_328045426_uJy7UOJC0BFFEioxqRe1fLUH3G5WjFeU.jpg"
+                width="100%" height="500px" alt="" class="img-thumbnail">
+        </div><br><br>
+
+
+        <h1 style="text-align: center;color: rgba(255, 255, 255, 0.779);">New Arrivals</h1>
+        <p style="text-align: center;color:  rgba(255, 255, 255, 0.779);font-family: 'Playfair Display', serif;">Summers
+            Collection New Modern Design</p><br>
+
+
+
+
+
+            <div class="container">
+                <div class="row py-3">
+                    <div class="card-deck">
+                        <div class="card">
+                            <img style=" border-radius: 24px 24px 0px 0px;" src="https://rukminim1.flixcart.com/image/800/960/ksxjs7k0/t-shirt/o/e/h/s-j20j215698beh-calvin-klein-jeans-original-imag6efgtkyg6wue.jpeg?q=50"
+                                alt="" class="card-img-top">
+                            <div class="card-body">
+                                <h4 style="text-align: center;" class="card-title">JACK & JONES </h4>
+                                <p style="text-align: center;" class="card-text">Men Regular Fit Checkered Spread Collar Casual
+                                    Shirt</p>
+                                <p style="text-align: center;">3109/-</p>
+                                <a href="https://www.flipkart.com/jack-jones-men-checkered-casual-multicolor-shirt/p/itmba5f4fab14043?pid=SHTGE2K4F9XVSNPV&lid=LSTSHTGE2K4F9XVSNPVTLYSDF&marketplace=FLIPKART&q=jack+and+jones+jeans+regular+fit+men+shirt&store=clo%2Fash%2Faxc%2Fmmk%2Fkp7&srno=s_1_2&otracker=search&otracker1=search&fm=Search&iid=db24dacf-caa1-47a0-8e50-7eeb91ada901.SHTGE2K4F9XVSNPV.SEARCH&ppt=sp&ppn=sp&ssid=avcivv3ti80000001657169067871&qH=2c38cd1dc6301c88"
+                                    class="btn btn stretched-link mx-5"
+                                    style="background-color: ;color: rgba(255, 255, 255, 0.779);">Add to Cart</a>
+                            </div>
+                        </div>
+        
+                        <div class="card">
+                            <img style=" border-radius: 24px 24px 0px 0px;" src="https://rukminim1.flixcart.com/image/800/960/kshtxu80/t-shirt/y/m/8/s-4wt1k131628-calvin-klein-jeans-original-imag6fnxyx5t34js.jpeg?q=50"
+                                alt="" class="card-img-top">
+                            <div class="card-body">
+                                <h4 style="text-align: center;margin-top;" class="card-title">Calvin Klein </h4>
+                                <p style="text-align: center;" class="card-text">Printed Women Round Neck Black T-Shirt</p>
+                                <p style="text-align: center;">2591/-</p>
+                                <a href="https://www.flipkart.com/calvin-klein-jeans-printed-women-round-neck-black-t-shirt/p/itm4f8c8d8e01c5d?pid=TSHG4G3C9XMKYD6E&lid=LSTTSHG4G3C9XMKYD6EB5U393&marketplace=FLIPKART&q=calvin+klein+women+t+shirt&store=clo%2Fash%2Fank%2Floi&srno=s_1_34&otracker=AS_QueryStore_OrganicAutoSuggest_1_20_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_20_na_na_na&fm=search-autosuggest&iid=85d1d7ee-52d8-4bb3-b781-cb6559e0c829.TSHG4G3C9XMKYD6E.SEARCH&ppt=sp&ppn=sp&ssid=vyufebsar40000001657169167859&qH=33869f8725d6e010"
+                                    class="btn btn stretched-link mx-5"
+                                    style="background-color: ;color: rgba(255, 255, 255, 0.779);">Add to Cart</a>
+                            </div>
+                        </div>
+        
+                        <div class="card">
+                            <img style=" border-radius: 24px 24px 0px 0px;" src="https://rukminim1.flixcart.com/image/800/960/kthjy4w0/t-shirt/g/x/2/m-k10k106836mrz-calvin-klein-jeans-original-imag6thjakhfpbgk.jpeg?q=50"
+                                alt="" class="card-img-top">
+                            <div class="card-body">
+                                <h4 style="text-align: center;" class="card-title">JACK & JONES </h4>
+                                <p style="text-align: center;" class="card-text">Printed Men T-Shirt blue printed dark blue
+                                    T-shirt</p>
+                                <p style="text-align: center;">500/-</p>
+                                <a href="http://127.0.0.1:5500/page1.html#" class="btn btn stretched-link mx-5"
+                                    style="background-color: ;color: rgba(255, 255, 255, 0.779);">Add to Cart</a>
+                            </div>
+                        </div>
+        
+                        <div class="card">
+                            <img style=" border-radius: 24px 24px 0px 0px;" src="https://rukminim1.flixcart.com/image/800/960/kthjy4w0/t-shirt/i/n/h/m-4mf1k100001-calvin-klein-jeans-original-imag6thcgqrrxn7k.jpeg?q=50"
+                                alt="" class="card-img-top">
+                            <div class="card-body">
+                                <h4 style="text-align: center;margin-top: ;" class="card-title">JACK & JONES </h4>
+                                <p style="text-align: center;" class="card-text">Men Regular Fit Checkered Spread Collar Printed
+                                    Shirt</p>
+                                <p style="text-align: center;">600/-</p>
+                                <a href="http://127.0.0.1:5500/page1.html#" class="btn btn stretched-link mx-5"
+                                    style="background-color: ;color: rgba(255, 255, 255, 0.779);">Add to Cart</a>
+                            </div>
+                        </div>
+        
+                    </div>
+                </div>
+            </div>
+
+
+
+            
+            <div class="container">
+                <div class="row py-3">
+                    <div class="card-deck">
+                        <div class="card">
+                            <img style=" border-radius: 24px 24px 0px 0px;" src="https://rukminim1.flixcart.com/image/800/960/l0lbrm80/shirt/j/h/z/10-11-years-jc-boy22-hs-shirt-aop-wht-leaf-jump-cuts-original-imagcccb77pgjr3z.jpeg?q=50"
+                                alt="" class="card-img-top">
+                            <div class="card-body">
+                                <h4 style="text-align: center;" class="card-title">JACK & JONES </h4>
+                                <p style="text-align: center;" class="card-text">Men Regular Fit Checkered Spread Collar Casual
+                                    Shirt</p>
+                                <p style="text-align: center;">3109/-</p>
+                                <a href="https://www.flipkart.com/jack-jones-men-checkered-casual-multicolor-shirt/p/itmba5f4fab14043?pid=SHTGE2K4F9XVSNPV&lid=LSTSHTGE2K4F9XVSNPVTLYSDF&marketplace=FLIPKART&q=jack+and+jones+jeans+regular+fit+men+shirt&store=clo%2Fash%2Faxc%2Fmmk%2Fkp7&srno=s_1_2&otracker=search&otracker1=search&fm=Search&iid=db24dacf-caa1-47a0-8e50-7eeb91ada901.SHTGE2K4F9XVSNPV.SEARCH&ppt=sp&ppn=sp&ssid=avcivv3ti80000001657169067871&qH=2c38cd1dc6301c88"
+                                    class="btn btn stretched-link mx-5"
+                                    style="background-color: ;color: rgba(255, 255, 255, 0.779);">Add to Cart</a>
+                            </div>
+                        </div>
+        
+                        <div class="card">
+                            <img style=" border-radius: 24px 24px 0px 0px;" src="https://rukminim1.flixcart.com/image/800/960/ky90scw0/shirt/h/z/c/-original-imagagsd2dkqpdsx.jpeg?q=50"
+                                alt="" class="card-img-top">
+                            <div class="card-body">
+                                <h4 style="text-align: center;margin-top:x;" class="card-title">Calvin Klein </h4>
+                                <p style="text-align: center;" class="card-text">Printed Women Round Neck Black T-Shirt</p>
+                                <p style="text-align: center;">2591/-</p>
+                                <a href="https://www.flipkart.com/calvin-klein-jeans-printed-women-round-neck-black-t-shirt/p/itm4f8c8d8e01c5d?pid=TSHG4G3C9XMKYD6E&lid=LSTTSHG4G3C9XMKYD6EB5U393&marketplace=FLIPKART&q=calvin+klein+women+t+shirt&store=clo%2Fash%2Fank%2Floi&srno=s_1_34&otracker=AS_QueryStore_OrganicAutoSuggest_1_20_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_20_na_na_na&fm=search-autosuggest&iid=85d1d7ee-52d8-4bb3-b781-cb6559e0c829.TSHG4G3C9XMKYD6E.SEARCH&ppt=sp&ppn=sp&ssid=vyufebsar40000001657169167859&qH=33869f8725d6e010"
+                                    class="btn btn stretched-link mx-5"
+                                    style="background-color: ;color: rgba(255, 255, 255, 0.779);">Add to Cart</a>
+                            </div>
+                        </div>
+        
+                        <div class="card">
+                            <img style=" border-radius: 24px 24px 0px 0px;" src="https://rukminim1.flixcart.com/image/800/960/kupuljk0/sweater/5/h/0/6-7-years-arrow-sweater-060-anixa-original-imag7s5ezmqw9awz.jpeg?q=50"
+                                alt="" class="card-img-top">
+                            <div class="card-body">
+                                <h4 style="text-align: center;margin-top: ;" class="card-title">JACK & JONES </h4>
+                                <p style="text-align: center;" class="card-text">Printed Men T-Shirt blue printed dark blue
+                                    T-shirt</p>
+                                <p style="text-align: center;">500/-</p>
+                                <a href="http://127.0.0.1:5500/page1.html#" class="btn btn stretched-link mx-5"
+                                    style="background-color: ;color: rgba(255, 255, 255, 0.779);">Add to Cart</a>
+                            </div>
+                        </div>
+        
+                        <div class="card">
+                            <img style=" border-radius: 24px 24px 0px 0px;" src="https://rukminim1.flixcart.com/image/800/960/kura1e80/sweater/0/u/j/5-6-years-butterfly-sweater-060-trendy-world-original-imag7szxw9keg7vh.jpeg?q=50"
+                                alt="" class="card-img-top">
+                            <div class="card-body">
+                                <h4 style="text-align: center;margin-top: ;" class="card-title">JACK & JONES </h4>
+                                <p style="text-align: center;" class="card-text">Men Regular Fit Checkered Spread Collar Printed
+                                    Shirt</p>
+                                <p style="text-align: center;">600/-</p>
+                                <a href="http://127.0.0.1:5500/page1.html#" class="btn btn stretched-link mx-5"
+                                    style="background-color: ;color: rgba(255, 255, 255, 0.779);">Add to Cart</a>
+                            </div>
+                        </div>
+        
+                    </div>
+                </div>
+            </div><br><br>
+
+
+            <div class="card-deck">
+        
+                <div class="card bg-dark text-white "style="border:7px solid white;">
+                    <img style=" border-radius: 24px 24px 0px 0px;width: 100%;height: 100%;" src="https://img.freepik.com/free-vector/hand-drawn-floral-sale-banner-with-photo_1188-326.jpg?t=st=1657175852~exp=1657176452~hmac=8ad2a39db2ae9e3a50ed068e9fabfd652867487412d64e4b0949537179a9735b&w=740"  class="card-img"   alt="..."  >
+                    <div class="card-img-overlay">
+                      <h5 class="card-title"></h5>
+                      <p class="card-text"></p>
+                      <a href="https://www.flipkart.com/calvin-klein-jeans-printed-women-round-neck-black-t-shirt/p/itm4f8c8d8e01c5d?pid=TSHG4G3C9XMKYD6E&lid=LSTTSHG4G3C9XMKYD6EB5U393&marketplace=FLIPKART&q=calvin+klein+women+t+shirt&store=clo%2Fash%2Fank%2Floi&srno=s_1_34&otracker=AS_QueryStore_OrganicAutoSuggest_1_20_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_20_na_na_na&fm=search-autosuggest&iid=85d1d7ee-52d8-4bb3-b781-cb6559e0c829.TSHG4G3C9XMKYD6E.SEARCH&ppt=sp&ppn=sp&ssid=vyufebsar40000001657169167859&qH=33869f8725d6e010"
+                                    class="btn btn stretched-link mx-5"
+                                    style="background-color: #3b85bb;color: rgba(255, 255, 255, 0.779);;margin-top: 200px;">Shop now</a>
+                     
+                    </div>
+                  </div>
+           
+        
+    
+    
+      
+                  <div class="card bg-dark text-white" style="border: 7px solid white;">
+                    <img style=" border-radius: 24px 24px 0px 0px;;width: 100%;height: 100%;" src="https://img.freepik.com/free-vector/hand-drawn-floral-sale-banner-with-photo_1188-325.jpg?t=st=1657175896~exp=1657176496~hmac=91c3ed36714a1ca2a90da991908bd5cb9ea3f44340b26ca2e233de1b59fc5a6b&w=740" class="card-img" alt="...">
+                    <div class="card-img-overlay">
+                      <h5 class="card-title"></h5>
+                      <p class="card-text"></p>
+                      <a href="https://www.flipkart.com/calvin-klein-jeans-printed-women-round-neck-black-t-shirt/p/itm4f8c8d8e01c5d?pid=TSHG4G3C9XMKYD6E&lid=LSTTSHG4G3C9XMKYD6EB5U393&marketplace=FLIPKART&q=calvin+klein+women+t+shirt&store=clo%2Fash%2Fank%2Floi&srno=s_1_34&otracker=AS_QueryStore_OrganicAutoSuggest_1_20_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_20_na_na_na&fm=search-autosuggest&iid=85d1d7ee-52d8-4bb3-b781-cb6559e0c829.TSHG4G3C9XMKYD6E.SEARCH&ppt=sp&ppn=sp&ssid=vyufebsar40000001657169167859&qH=33869f8725d6e010"
+                                    class="btn btn stretched-link mx-5"
+                                    style="background-color: #dbac1c;color: rgba(63, 63, 63, 0.779);margin-top: 200px;">Shop now</a>
+                    </div>
+                  </div>
+                  </div><br> <br><br><br><br>
+
+
+
+
+
+
+                  <h1 style="text-align: center;color: rgba(255, 255, 255, 0.779);">Contact us</h1>
+
+                  <div class="card1">
+                    <span class="title">Leave a Comment</span>
+                    <form class="form">
+                      <div class="group">
+                      <input placeholder="‎" type="text" required="">
+                      <label for="name">Name</label>
+                      </div>
+                  <div class="group">
+                      <input placeholder="‎" type="email" id="email" name="email" required="">
+                      <label for="email">Email</label>
+                      </div>
+                  <div class="group">
+                      <textarea placeholder="‎" id="comment" name="comment" rows="5" required=""></textarea>
+                      <label for="comment">Comment</label>
+                  </div>
+                      <button type="submit">Submit</button>
+                    </form>
+                  </div>
+
+                  
+              
+
+                  <footer class="bg- py-5"  style="background-color: #6e80c0;border-top: 30px solid white;">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-3 mb-4 mb-md-0">
+                          <h4 class="text-white mb-3">Contact</h4>
+                          <p class="text-white">Address: Washington Road, Street 32<br>Bangalore</p>
+                          <p class="text-white">Phone: 01 222 365 627378</p>
+                          <div class="d-flex">
+                            <a href="#" class="me-3 text-white"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="me-3 text-white"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="me-3 text-white"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="me-3 text-white"><i class="fab fa-pinterest-p"></i></a>
+                            <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+                          </div>
+                        </div>
+                        <div class="col-md-3 mb-4 mb-md-0">
+                          <h4 class="text-white mb-3">About</h4>
+                          <ul class="list-unstyled">
+                            <li><a href="#" class="text-white">About us</a></li>
+                            <li><a href="#" class="text-white">Delivery Information</a></li>
+                            <li><a href="#" class="text-white">Privacy Policy</a></li>
+                            <li><a href="#" class="text-white">Terms & Conditions</a></li>
+                            <li><a href="#" class="text-white">Contact Us</a></li>
+                          </ul>
+                        </div>
+                        <div class="col-md-3 mb-4 mb-md-0">
+                          <h4 class="text-white mb-3">My Account</h4>
+                          <ul class="list-unstyled">
+                            <li><a href="#" class="text-white">Sign In</a></li>
+                            <li><a href="#" class="text-white">View Cart</a></li>
+                            <li><a href="#" class="text-white">My Wishlist</a></li>
+                            <li><a href="#" class="text-white">Track My Orders</a></li>
+                          </ul>
+                        </div>
+                        <div class="col-md-3">
+                          <h4 class="text-white mb-3">Help</h4>
+                          <ul class="list-unstyled">
+                            <li><a href="#" class="text-white">Payments</a></li>
+                            <li><a href="#" class="text-white">Shipping</a></li>
+                            <li><a href="#" class="text-white">Cancellation & Returns</a></li>
+                            <li><a href="#" class="text-white">FAQ</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </footer>
+        
+
+
+
+
+
+</body>
+
+
+</html>
